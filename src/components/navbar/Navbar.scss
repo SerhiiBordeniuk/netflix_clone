@@ -1,0 +1,57 @@
+.navbar {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(29,28,26,1) 33%);
+    .container {
+        margin: 0px 60px;
+        display: flex;
+        justify-content: space-between;
+        .navbar__left {
+            margin-top: 26px;
+            margin-bottom: 26px;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 500;
+            .main_logo {
+                width: 111px;
+                height: 30px;
+                margin-right: 30px;
+            }
+            .navigation_tab {
+              margin-left: 20px;
+                cursor: pointer;
+                
+            }
+        }
+
+        .navbar__right {
+            display: flex;
+            align-items: center;
+            margin-top: 26px;
+            margin-bottom: 26px;
+            gap: 20px;
+            button {
+                outline: none;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+            }
+            .nav_element {
+                .profile_menu {
+                    .dropdown_button {
+                        display: flex;
+                        align-items: center;
+                        .avatar {
+                            width: 32px;
+                            height: 32px;
+                            object-fit: cover;
+                        }
+                        .downarrow {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
