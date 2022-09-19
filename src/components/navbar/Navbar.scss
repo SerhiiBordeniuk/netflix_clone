@@ -1,11 +1,13 @@
 .navbar {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(29,28,26,1) 33%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(29, 28, 26, 1) 33%);
     .container {
         margin: 0px 60px;
         display: flex;
         justify-content: space-between;
         .navbar__left {
+            display: flex;
+            align-items: center;
             margin-top: 26px;
             margin-bottom: 26px;
             color: white;
@@ -18,9 +20,8 @@
                 margin-right: 30px;
             }
             .navigation_tab {
-              margin-left: 20px;
+                margin-left: 20px;
                 cursor: pointer;
-                
             }
         }
 

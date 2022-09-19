@@ -33,7 +33,7 @@ const Navbar = () => {
                     <div className="nav_element">
                         <div className="profile_menu" /* "active_profile_menu" */>
                             <div className="dropdown_button">
-                                <img className="avatar" src={profile} alt="profile image" />
+                                <img className="avatar" src={profile} alt="profile" />
                                 <span className="downarrow">
                                     <img src={downarrow} alt="" />
                                 </span>
