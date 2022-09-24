@@ -1,0 +1,29 @@
+.billboard {
+    color: white;
+    object-fit: contain;
+    height: 810px;
+    .billboard__content {
+        padding-top: 200px;
+        margin-left: 60px;
+        width: 636px;
+        height: 392px;
+        .billboard__title {
+            font-size: 3rem;
+            font-weight: 800;
+            padding-bottom: 0.3rem;
+        }
+        .billboard__description {
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 33px;
+        }
+        .billboard__buttons {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+        }
+    }
+}
