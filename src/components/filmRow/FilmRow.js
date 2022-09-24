@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "../../services/axios";
 import "./FilmRow.scss";
-
-const base_url = "https://image.tmdb.org/t/p/original/";
+import { base_url } from "../../services/requests";
 
 const FilmRow = ({ title, fetchUrl }) => {
     const [movies, setMovies] = useState([]);
@@ -17,16 +16,17 @@ const FilmRow = ({ title, fetchUrl }) => {
         fetchData();
     }, [fetchUrl]);
 
-    console.log(movies);
     return (
         <div className="filmrow">
-            <h2>{title}</h2>
+            <h2 className="title">{title}</h2>
+
             <div className="filmrow__posters">
                 {movies.map((movie) => (
                     <img
+                        key={movie.id}
                         className="filmrow__poster"
-                        width="243px"
-                        height="137px"
+                        width="285px"
+                        height="171px"
                         src={`${base_url}${movie.poster_path}`}
                         alt={movie.name}
                     />

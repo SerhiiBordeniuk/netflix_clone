@@ -4,10 +4,18 @@ import mainlogo from "../../resources/Netflix.svg";
 import bell from "../../resources/Notification.svg";
 import profile from "../../resources/profile.png";
 import downarrow from "../../resources/DownArrow.svg";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    window.onscroll = () => {
+        setIsScrolled(window.pageYOffset === 0 ? false : true);
+        return () => (window.onscroll = null);
+    };
+
     return (
-        <div className="navbar">
+        <div className={isScrolled ? "navbar scrolled" : "navbar"}>
             <div className="container">
                 <div className="navbar__left">
                     <img className="main_logo" src={mainlogo} alt="main logo" />

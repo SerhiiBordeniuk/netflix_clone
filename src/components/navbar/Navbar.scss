@@ -1,6 +1,12 @@
 .navbar {
+    position: fixed;
+    width: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(29, 28, 26, 1) 33%);
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+    &.scrolled {
+        background: #0b0b0b;
+    }
     .container {
         margin: 0px 60px;
         display: flex;

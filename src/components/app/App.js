@@ -1,18 +1,20 @@
-import './App.scss';
-import Navbar from '../navbar/Navbar';
-import FilmRow from '../filmRow/FilmRow';
-import requests from '../../services/requests';
+import "./App.scss";
+import Navbar from "../navbar/Navbar";
+import FilmRow from "../filmRow/FilmRow";
+import requests from "../../services/requests";
+import Billboard from "../billboard/Billboard";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <Navbar/>
-          <FilmRow fetchUrl={requests.fetchNetflixOriginals}/>
-          <FilmRow fetchUrl={requests.fetchTrending}/>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <Navbar />
+            <Billboard fetchUrl={requests.fetchTrending} />
+            <FilmRow fetchUrl={requests.fetchNetflixOriginals} title="Netflix Originals" />
+            <FilmRow fetchUrl={requests.fetchTrending} title="Trending Now" />
+            <FilmRow fetchUrl={requests.fetchTopRated} title="Top Rated" />
+            <FilmRow fetchUrl={requests.fetchActionMovies} title="Action Movies" />
+        </div>
+    );
 }
 
 export default App;

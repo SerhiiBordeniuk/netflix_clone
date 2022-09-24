@@ -1,0 +1,19 @@
+.title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 33px;
+
+    color: #e5e5e5;
+}
+
+.filmrow__posters {
+    display: flex;
+    gap: 5px;
+}
+
+.filmrow__poster {
+    width: 285px;
+    height: 171px;
+    object-fit: cover;
+}
