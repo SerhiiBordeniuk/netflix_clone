@@ -9,10 +9,12 @@ function App() {
         <div className="app">
             <Navbar />
             <Billboard fetchUrl={requests.fetchTrending} />
-            <FilmRow fetchUrl={requests.fetchNetflixOriginals} title="Netflix Originals" />
-            <FilmRow fetchUrl={requests.fetchTrending} title="Trending Now" />
-            <FilmRow fetchUrl={requests.fetchTopRated} title="Top Rated" />
-            <FilmRow fetchUrl={requests.fetchActionMovies} title="Action Movies" />
+            <div className="filmslist">
+                <FilmRow fetchUrl={requests.fetchNetflixOriginals} title="Netflix Originals" />
+                <FilmRow fetchUrl={requests.fetchTrending} title="Trending Now" />
+                <FilmRow fetchUrl={requests.fetchTopRated} title="Top Rated" />
+                <FilmRow fetchUrl={requests.fetchActionMovies} title="Action Movies" />
+            </div>
         </div>
     );
 }
