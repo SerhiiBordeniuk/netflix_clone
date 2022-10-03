@@ -2,7 +2,8 @@
     margin-bottom: 30px;
     .wrapper {
         position: relative;
-        .sliderArrow {
+        .swiper-button-prev,
+        .swiper-button-next {
             width: 50px;
             height: 100%;
             color: white;
@@ -13,14 +14,13 @@
             bottom: 0;
             margin: auto;
             cursor: pointer;
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
 
-            &.left {
-                left: 0;
-            }
-
-            &.right {
-                right: 0;
-            }
+        .swiper-button-next {
+            right: 0;
         }
     }
 
@@ -34,16 +34,23 @@
     }
 
     .filmrow__posters {
-        width: max-content;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        transition: all 1s ease;
+        // width: max-content;
+        // display: flex;
+        // gap: 5px;
+        // align-items: center;
+        // transition: all 1s ease;
     }
 
     .filmrow__poster {
         width: 285px;
         height: 160px;
         object-fit: cover;
+        cursor: pointer;
+    }
+
+    .filmrow__poster:hover {
+        z-index: 1;
+        scale: 1.2;
+        transition: 1s;
     }
 }
