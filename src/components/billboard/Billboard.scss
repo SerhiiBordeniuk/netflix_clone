@@ -2,11 +2,12 @@
     color: white;
     object-fit: contain;
     height: 810px;
+    width: 100%;
     .billboard__content {
         padding-top: 200px;
         margin-left: 60px;
-        width: 636px;
-        height: 392px;
+        width: 50%;
+        height: 40%;
         .billboard__title {
             font-size: 5rem;
             font-weight: 800;

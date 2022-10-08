@@ -1,0 +1,112 @@
+.modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    .modal__inner {
+        width: 850px;
+        overflow: hidden;
+        .modal__poster {
+            background-color: #141414;
+            color: white;
+            font-weight: 500;
+            line-height: 28px;
+            .modal__content {
+                display: flex;
+                flex-direction: column;
+                .close_button {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    cursor: pointer;
+                    margin: 10px;
+                }
+                .wrapper {
+                    padding: 250px 50px 10px 50px;
+                }
+                .modal__buttons {
+                    margin-top: 25px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .modal__button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgba(255, 255, 255, 0.3);
+                        color: #fff;
+                        cursor: pointer;
+                        outline: none;
+                        border: none;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 28px;
+                        padding: 15px 30px;
+                        gap: 20px;
+                        border-radius: 4px;
+                        &.play {
+                            color: black;
+                            background-color: #fff;
+                        }
+
+                        &.add {
+                            padding: 15px 15px;
+                            border-radius: 50%;
+                            border: 2px rgba(255, 255, 255, 0.3) solid;
+                            background: none;
+                        }
+
+                        &.like {
+                            padding: 15px 15px;
+                            border-radius: 50%;
+                            border: 2px rgba(255, 255, 255, 0.3) solid;
+                            background: none;
+                        }
+
+                        &.play:hover {
+                            background-color: rgba(255, 255, 255, 0.817);
+                        }
+                        &.like:hover {
+                            border: 2px white solid;
+                        }
+
+                        &.add:hover {
+                            border: 2px white solid;
+                        }
+                    }
+                }
+                .modal__details {
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: rgba(20, 20, 20, 5);
+                    box-shadow: 0 0 40px 40px rgba(20, 20, 20, 5);
+                    .details__left {
+                        width: 60%;
+
+                        .description {
+                            margin-top: 20px;
+                        }
+                    }
+                    .left_top {
+                        display: flex;
+                        gap: 30px;
+                        .coincidence {
+                            color: rgb(4, 195, 4);
+                        }
+                    }
+                    .details__right {
+                        span {
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
