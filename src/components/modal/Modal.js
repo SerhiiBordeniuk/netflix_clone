@@ -6,10 +6,11 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
-const Modal = ({ active, setctive }) => {
+const Modal = ({ active, setActive }) => {
+    console.log(active);
     return (
-        <div className="modal">
-            <div className="modal__inner">
+        <div className={active ? "modal_active" : "modal"}>
+            <div className="modal__inner" onClick={(e) => e.stopPropagation()}>
                 <div
                     className="modal__poster"
                     style={{
@@ -20,7 +21,9 @@ const Modal = ({ active, setctive }) => {
                 >
                     <div className="modal__content">
                         <div className="close_button">
-                            <CloseIcon />
+                            <button className="close" onClick={() => setActive(false)}>
+                                <CloseIcon />
+                            </button>
                         </div>
                         <div className="wrapper">
                             <h1 className="modal__title">Ingloryas bastards</h1>

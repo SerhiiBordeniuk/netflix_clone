@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const FilmRow = ({ title, fetchUrl }) => {
+const FilmRow = ({ title, fetchUrl, updateModal }) => {
     const [movies, setMovies] = useState([]);
     const [isHovering, setIsHovering] = useState(false);
 
@@ -81,6 +81,9 @@ const FilmRow = ({ title, fetchUrl }) => {
                     {movies.map((movie) => (
                         <SwiperSlide key={movie.id}>
                             <img
+                                onClick={() => {
+                                    updateModal(true);
+                                }}
                                 key={movie.id}
                                 className="filmrow__poster"
                                 // width="221px"

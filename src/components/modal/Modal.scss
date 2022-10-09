@@ -9,6 +9,11 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
     .modal__inner {
         width: 850px;
         overflow: hidden;
@@ -23,8 +28,14 @@
                 .close_button {
                     display: flex;
                     flex-direction: row-reverse;
-                    cursor: pointer;
                     margin: 10px;
+                    .close {
+                        cursor: pointer;
+                        outline: none;
+                        border: none;
+                        background: none;
+                        color: white;
+                    }
                 }
                 .wrapper {
                     padding: 250px 50px 10px 50px;
