@@ -8,10 +8,14 @@ import { useState } from "react";
 
 function App() {
     const [modalActive, setModalActive] = useState(false);
+    const [modalData, setModalData] = useState([]);
 
-    const updateModal = (value) => {
+    const updateModal = (value, data) => {
         setModalActive(value);
+        setModalData(data);
     };
+
+    console.log(modalData, modalActive);
 
     return (
         <div className="app">
@@ -22,24 +26,28 @@ function App() {
                     fetchUrl={requests.fetchNetflixOriginals}
                     title="Netflix Originals"
                     updateModal={updateModal}
+                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchTrending}
                     title="Trending Now"
                     updateModal={updateModal}
+                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchTopRated}
                     title="Top Rated"
                     updateModal={updateModal}
+                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchActionMovies}
                     title="Action Movies"
                     updateModal={updateModal}
+                    data={setModalData}
                 />
             </div>
-            <Modal active={modalActive} setActive={setModalActive} />
+            <Modal active={modalActive} setActive={setModalActive} movie={modalData} />
         </div>
     );
 }

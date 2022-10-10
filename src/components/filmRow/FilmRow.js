@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 const FilmRow = ({ title, fetchUrl, updateModal }) => {
     const [movies, setMovies] = useState([]);
     const [isHovering, setIsHovering] = useState(false);
+    const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,6 +26,8 @@ const FilmRow = ({ title, fetchUrl, updateModal }) => {
     const handleMouseEnter = (e) => {
         setIsHovering(true);
     };
+
+    console.log();
 
     return (
         <div className="filmrow">
@@ -82,12 +85,10 @@ const FilmRow = ({ title, fetchUrl, updateModal }) => {
                         <SwiperSlide key={movie.id}>
                             <img
                                 onClick={() => {
-                                    updateModal(true);
+                                    updateModal(true, movie);
                                 }}
                                 key={movie.id}
                                 className="filmrow__poster"
-                                // width="221px"
-                                // height="124px"
                                 src={`${base_url}${movie.backdrop_path}`}
                                 alt={movie.name}
                                 onMouseEnter={handleMouseEnter}

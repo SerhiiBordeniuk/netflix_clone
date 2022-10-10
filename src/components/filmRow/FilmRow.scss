@@ -38,12 +38,11 @@
         cursor: pointer;
         width: 221px;
         height: 124px;
-    }
-
-    .filmrow__poster:hover {
-        z-index: 10000;
-        scale: 1.2;
-        transition: 1s;
+        &:hover {
+            z-index: 100;
+            scale: 1.2;
+            transition: 1s;
+        }
     }
 }
 

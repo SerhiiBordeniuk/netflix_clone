@@ -19,7 +19,7 @@ const Billboard = (fetchUrl) => {
         };
 
         fetchData();
-    }, [fetchUrl]);
+    }, []);
 
     return (
         <div
