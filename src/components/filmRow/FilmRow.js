@@ -39,37 +39,44 @@ const FilmRow = ({ title, fetchUrl, updateModal }) => {
                             width: 0,
                             slidesPerView: 1,
                             slidesPerGroup: 1,
+                            spaceBetween: 10,
                         },
                         480: {
                             width: 480,
                             slidesPerView: 1,
                             slidesPerGroup: 1,
+                            spaceBetween: 10,
                         },
                         640: {
                             width: 640,
                             slidesPerView: 2,
                             slidesPerGroup: 2,
+                            spaceBetween: 10,
                         },
                         // when window width is >= 768px
                         768: {
                             width: 768,
                             slidesPerView: 4,
                             slidesPerGroup: 4,
+                            spaceBetween: 10,
                         },
                         992: {
                             width: 992,
                             slidesPerView: 5,
                             slidesPerGroup: 5,
+                            spaceBetween: 10,
                         },
                         1200: {
                             width: 1200,
                             slidesPerView: 6,
                             slidesPerGroup: 6,
+                            spaceBetween: 10,
                         },
                         1400: {
                             width: 1400,
                             slidesPerView: 6,
                             slidesPerGroup: 6,
+                            spaceBetween: 10,
                         },
                     }}
                     modules={[Navigation, Pagination]}

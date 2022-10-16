@@ -15,8 +15,15 @@
         visibility: visible;
     }
     .modal__inner {
-        width: 850px;
+        width: 60%;
+        height: 80%;
         overflow: hidden;
+        transform: scale(0.5);
+        transition: 0.4s all;
+
+        &.active {
+            transform: scale(1);
+        }
         .modal__poster {
             background-color: #141414;
             color: white;
@@ -112,6 +119,7 @@
                         }
                     }
                     .details__right {
+                        width: 30%;
                         span {
                             color: gray;
                         }

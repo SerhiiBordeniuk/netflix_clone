@@ -7,9 +7,14 @@ import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Modal = ({ active, setActive, movie }) => {
+    const genres = () => {};
+
     return (
         <div className={`modal ${active ? "active" : ""}`} onClick={() => setActive(false)}>
-            <div className="modal__inner" onClick={(e) => e.stopPropagation()}>
+            <div
+                className={`modal__inner ${active ? "active" : ""}`}
+                onClick={(e) => e.stopPropagation()}
+            >
                 <div
                     className="modal__poster"
                     style={{
