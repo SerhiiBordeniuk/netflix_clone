@@ -7,7 +7,7 @@ import downarrow from "../../resources/DownArrow.svg";
 import { useState } from "react";
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(true);
 
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -18,12 +18,17 @@ const Navbar = () => {
         <div className={isScrolled ? "navbar scrolled" : "navbar"}>
             <div className="container">
                 <div className="navbar__left">
+                    <div className="navbar__burger">
+                        <span></span>
+                    </div>
                     <img className="main_logo" src={mainlogo} alt="main logo" />
-                    <a className="navigation_tab">Home</a>
-                    <a className="navigation_tab">Series</a>
-                    <a className="navigation_tab">Movies</a>
-                    <a className="navigation_tab">New and popular</a>
-                    <a className="navigation_tab">My list</a>
+                    <div className="navbar__menu">
+                        <a className="navigation_tab">Home</a>
+                        <a className="navigation_tab">Series</a>
+                        <a className="navigation_tab">Movies</a>
+                        <a className="navigation_tab">New and popular</a>
+                        <a className="navigation_tab">My list</a>
+                    </div>
                 </div>
                 <div className="navbar__right">
                     <div className="nav_element">

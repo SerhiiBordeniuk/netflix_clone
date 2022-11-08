@@ -6,7 +6,7 @@
     .billboard__content {
         padding-top: 200px;
         margin-left: 60px;
-        width: 50%;
+        width: 60%;
         height: 40%;
         .billboard__title {
             font-size: 5rem;
@@ -54,3 +54,9 @@
         }
     }
 }
+
+// @media (max-width: 767px) {
+//     .billboard {
+//         display: none;
+//     }
+// }

@@ -17,7 +17,6 @@
     .modal__inner {
         width: 60%;
         height: 80%;
-        overflow: hidden;
         transform: scale(0.5);
         transition: 0.4s all;
 
@@ -45,7 +44,7 @@
                     }
                 }
                 .wrapper {
-                    padding: 250px 50px 10px 50px;
+                    margin: 250px 50px 0px 50px;
                 }
                 .modal__buttons {
                     margin-top: 25px;
@@ -100,28 +99,31 @@
                 }
                 .modal__details {
                     margin-top: 50px;
-                    display: flex;
-                    justify-content: space-between;
                     background-color: rgba(20, 20, 20, 5);
-                    box-shadow: 0 0 40px 40px rgba(20, 20, 20, 5);
-                    .details__left {
-                        width: 60%;
-
-                        .description {
-                            margin-top: 20px;
-                        }
-                    }
-                    .left_top {
+                    // box-shadow: 0 0 40px 40px rgba(20, 20, 20, 5);
+                    .modal__details_inner {
                         display: flex;
-                        gap: 30px;
-                        .coincidence {
-                            color: rgb(4, 195, 4);
+                        justify-content: space-between;
+                        margin: 15px 50px 10px 50px;
+                        .details__left {
+                            width: 60%;
+
+                            .description {
+                                margin-top: 20px;
+                            }
                         }
-                    }
-                    .details__right {
-                        width: 30%;
-                        span {
-                            color: gray;
+                        .left_top {
+                            display: flex;
+                            gap: 30px;
+                            .coincidence {
+                                color: rgb(4, 195, 4);
+                            }
+                        }
+                        .details__right {
+                            width: 30%;
+                            span {
+                                color: gray;
+                            }
                         }
                     }
                 }

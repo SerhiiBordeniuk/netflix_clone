@@ -44,14 +44,16 @@ const Modal = ({ active, setActive, movie }) => {
                                     <ThumbUpIcon />
                                 </button>
                             </div>
-                            <div className="modal__details">
+                        </div>
+                        <div className="modal__details">
+                            <div className="modal__details_inner">
                                 <div className="details__left">
                                     <div className="left_top">
                                         <p className="coincidence">Coincidence: 95%</p>
-                                        <p className="release_date">{movie.first_air_date}</p>
+                                        <p className="release_date">{movie?.first_air_date}</p>
                                         <p className="age_restriction">16+</p>
                                     </div>
-                                    <div className="description">{movie.overview}</div>
+                                    <div className="description">{movie?.overview}</div>
                                 </div>
                                 <div className="details__right">
                                     <div className="genres">
@@ -59,7 +61,7 @@ const Modal = ({ active, setActive, movie }) => {
                                         Thriller, Fantasy
                                     </div>
                                     <div className="origin_country">
-                                        <span>Country of origin: {movie.origin_country} </span>
+                                        <span>Country of origin: {movie?.origin_country} </span>
                                     </div>
                                 </div>
                             </div>

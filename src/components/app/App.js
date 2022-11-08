@@ -20,31 +20,27 @@ function App() {
     return (
         <div className="app">
             <Navbar />
-            <Billboard fetchUrl={requests.fetchTrending} />
+            <Billboard updateModal={updateModal} />
             <div className="filmslist">
                 <FilmRow
                     fetchUrl={requests.fetchNetflixOriginals}
                     title="Netflix Originals"
                     updateModal={updateModal}
-                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchTrending}
                     title="Trending Now"
                     updateModal={updateModal}
-                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchTopRated}
                     title="Top Rated"
                     updateModal={updateModal}
-                    data={setModalData}
                 />
                 <FilmRow
                     fetchUrl={requests.fetchActionMovies}
                     title="Action Movies"
                     updateModal={updateModal}
-                    data={setModalData}
                 />
             </div>
             <Modal active={modalActive} setActive={setModalActive} movie={modalData} />

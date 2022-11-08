@@ -6,7 +6,7 @@ import "./Billboard.scss";
 import details from "../../resources/Details.svg";
 import play from "../../resources/Play.svg";
 
-const Billboard = (fetchUrl) => {
+const Billboard = ({ updateModal }) => {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
@@ -39,7 +39,12 @@ const Billboard = (fetchUrl) => {
                     <button className="billboard__button play">
                         <img src={play}></img>Play
                     </button>
-                    <button className="billboard__button">
+                    <button
+                        className="billboard__button"
+                        onClick={() => {
+                            updateModal(true, movie);
+                        }}
+                    >
                         <img src={details}></img>Details
                     </button>
                 </div>
