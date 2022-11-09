@@ -8,21 +8,29 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(true);
+    const [isActive, setActive] = useState(false);
 
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return () => (window.onscroll = null);
     };
 
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
+
     return (
         <div className={isScrolled ? "navbar scrolled" : "navbar"}>
             <div className="container">
                 <div className="navbar__left">
-                    <div className="navbar__burger">
+                    <div
+                        className={isActive ? "navbar__burger active" : "navbar__burger"}
+                        onClick={toggleClass}
+                    >
                         <span></span>
                     </div>
                     <img className="main_logo" src={mainlogo} alt="main logo" />
-                    <div className="navbar__menu">
+                    <div className={isActive ? "navbar__menu active" : "navbar__menu"}>
                         <a className="navigation_tab">Home</a>
                         <a className="navigation_tab">Series</a>
                         <a className="navigation_tab">Movies</a>
