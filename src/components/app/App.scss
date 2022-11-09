@@ -1,8 +1,10 @@
 .app {
     overflow: hidden;
     .filmslist {
+        margin-top: 40px;
         margin-left: 60px;
         @media (max-width: 767px) {
+            margin-top: 10px;
             margin-left: 0;
         }
     }

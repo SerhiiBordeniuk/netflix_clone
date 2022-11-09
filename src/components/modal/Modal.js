@@ -7,8 +7,6 @@ import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Modal = ({ active, setActive, movie }) => {
-    const genres = () => {};
-
     return (
         <div className={`modal ${active ? "active" : ""}`} onClick={() => setActive(false)}>
             <div
