@@ -2,10 +2,11 @@ import "./MobileFilmPage.scss";
 import { base_url } from "../../services/requests";
 import mainlogo from "../../resources/Netflix.svg";
 import forward from "../../resources/forward.png";
+import { Link } from "react-router-dom";
 
 import React from "react";
 
-export const MobileFilmPage = (movie) => {
+const MobileFilmPage = (movie) => {
     return (
         <div className="mobilefilmpage">
             <div className="content">
@@ -17,9 +18,9 @@ export const MobileFilmPage = (movie) => {
                         backgroundPosition: "center center",
                     }}
                 ></div>
-                <a href="" className="main__logo">
+                <Link to="/" href="" className="main__logo">
                     <img className="logo_netflix" src={mainlogo} alt="logo" />
-                </a>
+                </Link>
                 <div className="film__info">
                     <div className="title__data">
                         <div className="title">
@@ -45,3 +46,5 @@ export const MobileFilmPage = (movie) => {
         </div>
     );
 };
+
+export default MobileFilmPage;
