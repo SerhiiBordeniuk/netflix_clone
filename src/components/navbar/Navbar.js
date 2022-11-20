@@ -5,6 +5,7 @@ import bell from "../../resources/Notification.svg";
 import profile from "../../resources/profile.png";
 import downarrow from "../../resources/DownArrow.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(true);
@@ -29,7 +30,9 @@ const Navbar = () => {
                     >
                         <span></span>
                     </div>
-                    <img className="main_logo" src={mainlogo} alt="main logo" />
+                    <Link to="/">
+                        <img className="main_logo" src={mainlogo} alt="main logo" />
+                    </Link>
                     <div className={isActive ? "navbar__menu active" : "navbar__menu"}>
                         <a className="navigation_tab">Home</a>
                         <a className="navigation_tab">Series</a>
